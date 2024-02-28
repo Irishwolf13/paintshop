@@ -9,6 +9,7 @@ export default function Joblist() {
   const handleToggle = (index, jobNumber) => {
     if (activeIndex === index) {
       setActiveIndex(null);
+      setActiveJob(null)
     } else {
       setActiveIndex(index);
       setActiveJob(jobNumber)
@@ -26,8 +27,8 @@ export default function Joblist() {
         onClick={() => handleToggle(index, job)}
       >
         <div>{`#${job.jobNumber}`}</div>
-        <div>{job.title}</div>
-        <div>{`Feb 2024`}</div>
+        <div>{job.name}</div>
+        <div>{job.date}</div>
       </div>
     ));
   };
@@ -35,7 +36,6 @@ export default function Joblist() {
   return (
     <div>
       <p>Job List</p>
-      <div>Filters go here</div>
       <div>{renderJobs()}</div>
     </div>
   );

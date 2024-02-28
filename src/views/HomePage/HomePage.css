@@ -16,7 +16,3 @@
   height: 94vh;
   background-color: rgb(149, 149, 149);
 }
-.home-right-container > div {
-  flex: 1;
-  min-width: 300px;
-}

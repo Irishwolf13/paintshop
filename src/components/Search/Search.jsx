@@ -4,17 +4,17 @@ import { useJobs } from '../../context/JobsContext';
 
 export default function Search() {
   const { filterJobs } = useJobs();
-  const [titleInput, setTitleInput] = useState('');
+  const [nameInput, setNameInput] = useState('');
   const [colorInput, setColorInput] = useState('');
 
-  const handleTitleChange = (e) => {
-    setTitleInput(e.target.value);
-    filterJobs(e.target.value, 'title', colorInput);
+  const handleNameChange = (e) => {
+    setNameInput(e.target.value);
+    filterJobs(e.target.value, 'name', colorInput);
   };
 
   const handleColorChange = (e) => {
     setColorInput(e.target.value);
-    filterJobs(e.target.value, 'color', titleInput);
+    filterJobs(e.target.value, 'color', nameInput);
   };
 
   return (
@@ -24,8 +24,8 @@ export default function Search() {
         className='search-input'
         type="text"
         placeholder="Search..."
-        value={titleInput}
-        onChange={handleTitleChange}
+        value={nameInput}
+        onChange={handleNameChange}
       />
       <p className='search-title'>Search by Color</p>
       <input
