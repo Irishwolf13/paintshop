@@ -4,13 +4,19 @@
 }
 
 .home-left-container {
-  flex: 20%;
+  flex: 18%;
   height: 94vh;
+  padding: 0px 2%;
   background-color: rgb(207, 207, 207);
 }
 
 .home-right-container {
+  display: flex;
   flex: 80%;
   height: 94vh;
   background-color: rgb(149, 149, 149);
+}
+.home-right-container > div {
+  flex: 1;
+  min-width: 300px;
 }
