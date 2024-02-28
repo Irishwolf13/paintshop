@@ -23,7 +23,6 @@ export default function Header() {
 
   return (
     <div className='header-container'>
-      <div>Header Will go here.</div>
       {user.currentUser && <button onClick={handleSignOut}>Log Out</button>}
     </div>
   )

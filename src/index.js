@@ -6,13 +6,16 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import store from './store/store.js';
 import { BrowserRouter } from "react-router-dom";
+import { JobsProvider } from './context/JobsContext.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
   <BrowserRouter>
   <Provider store={store}>
+  <JobsProvider>
     <App />
+  </JobsProvider>
   </Provider>
   </BrowserRouter>
   </React.StrictMode>
